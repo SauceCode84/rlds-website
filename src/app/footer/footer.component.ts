@@ -1,0 +1,14 @@
+import { Component } from "@angular/core";
+
+@Component({
+  selector: "rlds-footer",
+  templateUrl: "./footer.component.html",
+  styleUrls: ["./footer.component.scss"]
+})
+export class FooterComponent {
+
+  get year() {
+    return new Date(Date.now()).getFullYear();
+  }
+
+}

@@ -2,6 +2,12 @@
 
 @import "font-pt-sans";
 
-body {
-  font-family: $font-pt-sans;
-}
+$font-family-sans-serif: $font-pt-sans;
+
+$purple: #673AB7;
+
+$theme-colors: (
+  primary: $purple
+);
+
+@import "../node_modules/bootstrap/scss/bootstrap";
