@@ -1,0 +1,35 @@
+@import "../../styles";
+
+table.timetable {
+  display: table;
+  table-layout: fixed;
+
+  th {
+    @extend .text-center, .text-uppercase;
+
+    font-family: $font-pt-sans-caption;
+    font-size: 0.875rem;
+    letter-spacing: 0.25rem;
+  }
+
+  td {
+    text-align: center;
+  }
+
+  .time {
+    display: block;
+    color: $purple;
+    font-family: $font-pt-sans-caption;
+  }
+
+  .item {
+    display: block;
+    font-weight: bold;
+  }
+
+  .description {
+    @extend .text-muted;
+    
+    font-style: italic;
+  }
+}
