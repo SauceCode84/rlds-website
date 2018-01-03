@@ -10,6 +10,8 @@ import { FeesComponent } from "./fees/fees.component";
 import { NavBarComponent } from "./nav-bar/nav-bar.component";
 import { FooterComponent } from "./footer/footer.component";
 
+import { WINDOW_PROVIDERS } from "./window.service";
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,7 +27,7 @@ import { FooterComponent } from "./footer/footer.component";
     AppRoutingModule,
     BrowserTransferStateModule
   ],
-  providers: [],
+  providers: [ WINDOW_PROVIDERS ],
   bootstrap: [ AppComponent ]
 })
 export class AppModule { }
