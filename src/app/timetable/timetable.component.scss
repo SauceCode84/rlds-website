@@ -1,5 +1,16 @@
 @import "../../styles";
 
+.time {
+  color: $purple;
+  font-family: $font-pt-sans-caption;
+}
+
+.description {
+  @extend .text-muted;
+  
+  font-style: italic;
+}
+
 table.timetable {
   display: table;
   table-layout: fixed;
@@ -17,19 +28,13 @@ table.timetable {
   }
 
   .time {
+    @extend .time;
     display: block;
-    color: $purple;
-    font-family: $font-pt-sans-caption;
   }
 
   .item {
     display: block;
     font-weight: bold;
   }
-
-  .description {
-    @extend .text-muted;
-    
-    font-style: italic;
-  }
+  
 }

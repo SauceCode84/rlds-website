@@ -11,6 +11,7 @@ import { NavBarComponent } from "./nav-bar/nav-bar.component";
 import { FooterComponent } from "./footer/footer.component";
 
 import { WINDOW_PROVIDERS } from "./window.service";
+import { TimetableService } from "./timetable.service";
 
 @NgModule({
   declarations: [
@@ -27,7 +28,11 @@ import { WINDOW_PROVIDERS } from "./window.service";
     AppRoutingModule,
     BrowserTransferStateModule
   ],
-  providers: [ WINDOW_PROVIDERS ],
+  providers: [
+    TimetableService,
+
+    WINDOW_PROVIDERS
+  ],
   bootstrap: [ AppComponent ]
 })
 export class AppModule { }
