@@ -1,0 +1,27 @@
+
+version: "3.1"
+
+services:
+
+  nginx:
+    container_name: nginx
+    image: saucecode/rlds-nginx
+    ports:
+      - "80:80"
+      - "443:443"
+    networks:
+      - app-network
+    depends_on:
+      - node
+  
+  node:
+    container_name: nodeserver
+    image: saucecode/rlds-web
+    ports:
+      - "4300:4300"
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge
