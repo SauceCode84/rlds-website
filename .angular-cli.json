@@ -32,12 +32,19 @@
       "platform": "server",
       "root": "src",
       "outDir": "dist/server",
-      "assets": [],
+      "assets": [
+        "assets",
+        "favicon.ico"
+      ],
       "index": "index.html",
       "main": "main.server.ts",
       "tsconfig": "tsconfig.server.json",
       "testTsconfig": "tsconfig.spec.json",
-      "prefix": "app",
+      "prefix": "",
+      "serviceWorker": false,
+      "styles": [
+        "styles.scss"
+      ],
       "scripts": [],
       "environmentSource": "environments/environment.ts",
       "environments": {
