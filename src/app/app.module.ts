@@ -12,6 +12,7 @@ import { FooterComponent } from "./footer/footer.component";
 
 import { WINDOW_PROVIDERS } from "./window.service";
 import { TimetableService } from "./timetable.service";
+import { SeoService } from "./seo.service";
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { TimetableService } from "./timetable.service";
   ],
   providers: [
     TimetableService,
+    SeoService,
 
     WINDOW_PROVIDERS
   ],
