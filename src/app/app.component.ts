@@ -1,18 +1,17 @@
-import { Component } from "@angular/core";
-import { Meta } from "@angular/platform-browser";
+import { Component, OnInit } from "@angular/core";
+import { SeoService } from "./seo.service";
 
 @Component({
   selector: "app-root",
   templateUrl: "./app.component.html",
   styleUrls: ["./app.component.scss"]
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
 
-  constructor(private meta: Meta) {
-    this.meta.addTag({
-      name: "description",
-      content: ""
-    });
+  constructor(private seo: SeoService) { }
+
+  ngOnInit() {
+    this.seo.generateTags();
   }
 
 }
