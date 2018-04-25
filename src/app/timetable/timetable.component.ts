@@ -2,6 +2,7 @@ import { Component, OnInit } from "@angular/core";
 import { ActivatedRoute } from "@angular/router";
 
 import { TimetableService, Day } from "../timetable.service";
+import { SeoService } from "../seo.service";
 
 @Component({
   selector: "app-timetable",
@@ -22,9 +23,15 @@ export class TimetableComponent implements OnInit {
 
   constructor(
     private timetableService: TimetableService,
-    private route: ActivatedRoute) { }
+    private route: ActivatedRoute,
+    private seo: SeoService) { }
 
   ngOnInit() {
+    this.seo.generateTags({
+      title: "Timetable | Rosslynne Lynch Dance Studio",
+      description: "Timetable for Term 2 - 10 April 2018 - 22 June 2018"
+    });
+
     this.route.fragment
       .subscribe(fragment => this.currentFragment = fragment);
   }
